@@ -1,198 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mrs Robina Appreciation</title>
-  <style>
-    /* Page sizing for A4 */
-    @page { size: A4; margin: 0; }
+<title>Mrs Robina Appreciation</title>
 
-    /* Base layout */
-    html,body { height: 100%; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: white;
-      width: 210mm;
-      height: 297mm;
-      margin: 0;
-      padding: 30mm 20mm;
-      box-sizing: border-box;
-      color: #111;
-      -webkit-print-color-adjust: exact; /* ensure colors print accurately */
-    }
+<style>
+@page {
+  size: A4;
+  margin: 0;
+}
 
-    /* Google-like logo */
-    .google {
-      text-align: center;
-      font-size: 48px; /* slightly reduced for reliable print fit */
-      font-weight: 700;
-      margin-bottom: 18px;
-      line-height: 1;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  width: 210mm;
+  height: 297mm;
+  margin: 0;
+  padding: 35mm 25mm;
+  box-sizing: border-box;
+}
 
-    .blue { color: #4285F4; }
-    .red { color: #EA4335; }
-    .yellow { color: #FBBC05; }
-    .green { color: #34A853; }
+.google {
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
 
-    /* Search box (decorative) */
-    .search {
-      border: 1px solid #ddd;
-      border-radius: 30px;
-      padding: 12px 20px;
-      font-size: 16px;
-      margin: 0 auto 26px auto;
-      max-width: 320px;
-      text-align: left;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.02) inset;
-    }
+.blue {color:#4285F4;}
+.red {color:#EA4335;}
+.yellow {color:#FBBC05;}
+.green {color:#34A853;}
 
-    .ai {
-      color: #555;
-      font-size: 14px;
-      margin-bottom: 6px;
-      text-align: center;
-    }
+.search {
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
 
-    .answer {
-      text-align: center;
-      font-size: 48px;
-      font-weight: 700;
-      color: #c62828; /* dark red */
-      margin-top: 8px;
-    }
+.ai {
+  color:#555;
+  font-size:15px;
+}
 
-    .heart {
-      text-align: center;
-      margin-top: 14px;
-    }
+.answer {
+  text-align:center;
+  font-size:55px;
+  font-weight:bold;
+  color:red;
+  margin-top:20px;
+}
 
-    .result {
-      margin-top: 28px;
-      max-width: 160mm;
-      margin-left: auto;
-      margin-right: auto;
-    }
+.heart {
+  text-align:center;
+  font-size:60px;
+  color:white;
+  -webkit-text-stroke:2px red;
+}
 
-    .result h1 {
-      color: #1a0dab;
-      font-size: 26px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-    }
+.result {
+  margin-top:35px;
+}
 
-    .result p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin: 10px 0;
-    }
+.result h2 {
+  color:#1a0dab;
+  font-size:28px;
+  font-weight:normal;
+}
 
-    .signature {
-      margin-top: 28px;
-      text-align: right;
-      font-size: 16px;
-    }
+.result p {
+  font-size:18px;
+  line-height:1.6;
+}
 
-    /* Accessibility helpers */
-    .visually-hidden {
-      position: absolute !important;
-      height: 1px; width: 1px;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-      white-space: nowrap;
-    }
+.signature {
+  margin-top:30px;
+  text-align:right;
+  font-size:18px;
+}
 
-    /* Print rules */
-    @media print {
-      html,body { margin: 0; padding: 10mm; }
-      .search { box-shadow: none; }
-      a { color: inherit; text-decoration: none; }
-      /* Avoid splitting paragraphs across pages where possible */
-      .result p { break-inside: avoid; }
-      footer { position: fixed; bottom: 10mm; left: 0; right: 0; }
-    }
-
-    /* Small screens: scale down slightly for preview */
-    @media (max-width: 800px) {
-      body { width: auto; height: auto; padding: 20px; }
-    }
-  </style>
+</style>
 </head>
+
+
 <body>
-  <main role="main" aria-labelledby="page-title">
 
-    <header>
-      <h1 id="page-title" class="visually-hidden">Mrs Robina Appreciation Card</h1>
+<div class="google">
+<span class="blue">G</span>
+<span class="red">o</span>
+<span class="yellow">o</span>
+<span class="blue">g</span>
+<span class="green">l</span>
+<span class="red">e</span>
+</div>
 
-      <div class="google" aria-hidden="true">
-        <span class="blue">G</span>
-        <span class="red">o</span>
-        <span class="yellow">o</span>
-        <span class="blue">g</span>
-        <span class="green">l</span>
-        <span class="red">e</span>
-      </div>
 
-      <div class="search" role="search" aria-label="Card question">
-        🔍 Who's the best teacher?
-      </div>
+<div class="search">
+🔍 Who's the best teacher?
+</div>
 
-      <div class="ai">AI Search Result:</div>
 
-      <div class="answer">It's You...</div>
+<div class="ai">
+AI Search Result:
+</div>
 
-      <div class="heart" aria-hidden="false" aria-label="Heart symbol">
-        <!-- Inline SVG heart: fills reliably when printing -->
-        <svg width="80" height="80" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <path d="M12 21s-7.5-4.9-10-8.1C-0.1 8.9 3.6 5 7.2 6.1 9 6.7 10 8 12 9.5c2-1.5 3-2.8 4.8-3.4 3.6-1.1 7.3 2.8 5.2 6.9C19.5 16.1 12 21 12 21z" fill="#e53935" />
-        </svg>
-      </div>
-    </header>
 
-    <article class="result" aria-labelledby="teacher-name">
-      <h1 id="teacher-name">Mrs. Robina</h1>
+<div class="answer">
+It's You...
+</div>
 
-      <p>
-        Before your lessons, science was a subject I enjoyed —
-        but only certain parts truly caught my attention.
-      </p>
 
-      <p>
-        The chapters related to Physics and Chemistry were the ones I found most interesting.
-        When science was divided into its three branches, Physics became my favourite.
-      </p>
+<div class="heart">
+♡
+</div>
 
-      <p>
-        But then came the person who changed the way I saw Biology...
-      </p>
 
-      <p>
-        A teacher who didn't just explain concepts,
-        but brought them to life.
-      </p>
+<div class="result">
 
-      <p>
-        Through your passion, patience, and dedication,
-        Biology became more than just another subject.
-      </p>
+<h2>Mrs. Robina</h2>
 
-      <p>
-        The subject I once saw as just another branch of science
-        became the one I now look forward to the most.
-      </p>
+<p>
+Before your lessons, science was a subject I enjoyed —
+but only certain parts truly caught my attention.
+</p>
 
-      <p>
-        Thank you, Mrs. Robina,
-        for changing my perspective and making Biology my favourite subject.
-      </p>
+<p>
+The chapters related to Physics and Chemistry were the ones I found most interesting.
+When science was divided into its three branches, Physics became my favourite.
+</p>
 
-    </article>
+<p>
+But then came the person who changed the way I saw Biology...
+</p>
 
-    <footer class="signature" role="contentinfo">
-      — Youssef Ahmed
-    </footer>
+<p>
+A teacher who didn't just explain concepts,
+but brought them to life.
+</p>
 
-  </main>
+<p>
+Through your passion, patience, and dedication,
+Biology became more than just another subject.
+</p>
+
+<p>
+The subject I once saw as just another branch of science
+became the one I now look forward to the most.
+</p>
+
+<p>
+Thank you, Mrs. Robina,
+for changing my perspective and making Biology my favourite subject.
+</p>
+
+</div>
+
+
+<div class="signature">
+— Youssef Ahmed
+</div>
+
+
 </body>
 </html>
